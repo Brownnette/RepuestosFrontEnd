@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="Styless.AgregarRepuesto.css">
+<link rel="icon"href="Imágenes/logos.ico" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="XJava.AgregarRepuestos.js"></script>
+
+</head>
+<!---Esto le da el head (color y el loco a la página)-->
+<header>
+<a href="Nosotros.html" class="logos">
+    <img src="Imágenes/Logos.jpg" alt="logos" width="50" height="50" class="logo">
+    <h2 class="logo-nombre">Repuestos 3J</h2>
+</a>  
+
+<!---Esto es el menú de opciones-->
+<nav class="nav">
+    <ul class="nav__list">
+        <li class="nav__item">
+            <a class="nav__link" href="Index.html"> Inicio</a> </li>
+        <li class="nav__item">
+            <a class="nav__link" href="Repuestos.html"> Repuestos</a> </li>
+        <li  class="nav__item">
+            <a class="nav__link" href="Servicios.html" > Servicios </a> </li>    
+        <li class="nav__item">
+            <a class="nav__link" href="Quienes_somos.html"> Sobre nosotros</a> </li>
+            <li class="nav__compra">
+                <a class="nav__link" href="AgregarRepuesto.html"> Agregar Producto</a> </li>
+        <ul class="nav_list-sub">
+            <Li><a href="Servicios.html">Lavadoras</a></Li>
+            <Li><a href="Neveras.html">Neveras</a></Li>
+        </ul>
+    </ul>
+    
+    </li>
+
+</ul>
+</ul>
+
+    </nav>       
+    </header>
+
+    <body>
+        <!---Fomrs para agregar repuestos-->
+        <div class="main-content">
+            <div class="productForm">
+                <label for="name">Nombre del Producto:</label>
+                <input type="text" name="name" required id="name" >
+                <br>
+                <label for="price">Precio:</label>
+                <input type="number" name="price" required id="price"  min="0" step="any">
+                <br>
+                <label for="productID">ProductID:</label>
+                <input type="number" name="productID" required id="productID"  min="0" step="any">
+
+                <br>
+                <div class="enviar">
+                    <input type="button" class="register__button2" id="save" value="Guardar">
+                </div>
+            </div>
+        </div>
+    <!---Tabla para ver los repuestos-->
+<section class="Tabla">
+<h2>Lista de repuestos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody id="repuestoTBody">
+
+
+    </tbody>
+</table>
+
+
+</section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="InformacionFooter">
+                <div class="Info">
+                    <p>Dirección: Calle 181 #49a -40 Bogotá, Colombia</p>
+                    <p>Teléfono: 3124381443</p>
+                    <p>Horarios: L-D 9:00 - 21:00</p>
+                </div>
+                <div class="Suscripcion">
+                    <p>SUSCRÍBASE Y OBTENGA 5% DE DESCUENTO</p>
+                    <div class="register__field2">
+                        <label class="register__label" for="Email">Email *</label>
+                        <input class="register__input" type="email" name="EmailInput" id="email" required>
+                    </div>
+                    <div class="enviar">
+                        <input type="submit" class="register__button2" value="Suscribirse">
+                    </div>
+                </div>
+            </div>
+            <div class="footer__info">
+                <p>&copy; 2024 3J. Todos los derechos reservados.</p>
+                <p><a href="Políticas_de_envío.html">Política de Envíos</a> | <a href="Contactenos.html">Contáctenos</a></p>
+                <p><a href="Index.html">Volver al inicio</a> 
+
+            </div>
+        </footer>
+    </body>

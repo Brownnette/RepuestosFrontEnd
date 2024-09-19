@@ -1,0 +1,229 @@
+/*(Logo y título todas las páginas)*/
+head{font-family:sans-serif ;}
+header{
+    display: flex;
+    justify-content:space-between ;
+    background-color: rgb(0, 123, 255);
+    margin: 0;
+    align-items: center;
+    padding: 0px;
+    justify-content: space-between;
+    border-radius: 10px;
+;
+}
+.logo{height: 125px; width: 150px;margin: 0%;margin-right: 10px;}
+.logos {
+    display: flex;
+    align-items: center;
+    margin:0px ;
+}
+.logo-nombre{padding: 0px;margin-left: 0;font-size: 40px;color: black;}
+
+    a{text-decoration: none;color: black;
+    }
+
+    .check{display: flex; position: absolute; top: 30px; left: 40px;}
+
+    /*(Listas barra navegación)*/
+    nav{display: flex; justify-content: space-around;align-items: start;}
+    nav.a{font-weight: 600;padding-left: 10px;}
+
+    .nav__item:hover{background-color: white;display: inline;} 
+    .nav{color: #000;background-color: rgb(0, 123, 255);
+        text-decoration: none /*(quita los puntitos de enumerar)*/;
+        padding: 0px 0px ;
+        text-align: center;
+    flex-wrap: nowrap ;}
+    .nav__compra{background-color: rgb(255, 87, 34);display: inline;font-size: 25px;padding: 40px;border-radius: 10px;text-decoration: none;}
+
+
+    .nav__item{padding: 20px;display: inline;flex-direction: row;font-size: 25px;place-content:initial}
+
+    .nav_list-sub{ display: none/*(para que no salga la lista)*/;
+        position: absolute; 
+        min-width: 40px
+    }
+.nav__link{text-decoration: none;color:#000;}
+    /*Barra de busqueda*/
+    input{outline: none;box-sizing: border-box;margin: 5px;height: auto;width: 300px;padding: 0 20px;color: black;border-radius: 50px;font-size: 20px;border: 1px solid #f09d0d;margin: 10px;}
+    /*btn{display: flex ;position: relative;right:11px;bottom: 60px;width: 40px;height: 40px;background: orange;line-height: 80px;text-align: center;cursor: pointer;transition: .5s;border-radius: 100%, ;top:2%;border-radius: 50%;}*/
+    .btn i {font-size: 25px;color: white;line-height: 80px; transition: all .7 ease;height: 80px;}
+
+    body{background-color: rgb(234, 234, 234);} /*le da color al background*/
+
+
+    /*Barra de busqueda repuestos*/
+    .barra2{display: flex;position: relative;background-color: #0df053; top: 60%;max-width: 1850px;min-width: 50px}
+
+
+
+    /*(formulario)*/
+    h2{font-size: 0px; color: black;text-transform: capitalize;font-size: 20px;}
+
+    .form_imput{background-color:   linear-gradient(rgba(44, 87, 229, 0.333), rgba(19, 42, 193, 0.6)); /*(Background del formulario*/
+        max-width: 700px;
+        max-height:800px ;
+    padding:  0px;
+    margin: 25px;
+    box-shadow: 0 0 30px;color:black /*(Le da brillo al formulario)*/;} 
+    p{font-size: 20px;}
+
+    .options{display: flex;margin: 20px;}
+    /*Compra repuestos botones <!--Servicios página medio-->  */
+    .Compraotros{    display:flex;   justify-content: space-evenly;
+        text-align: justify; }
+
+    .Compraotros{display: flex; background-image: url(https://serviciobogota.com.co/images/slider1.webp);background-repeat: no-repeat;background-size: 100%;width: 100%;height: 500px;border-radius: 30px;margin-top: 50px;text-align: justify;}
+
+    .comprarep{
+        background-color: rgb(255, 87, 34);display: flex inline;height: 80px;width: 200px;align-content:  center;border-radius: 50px;text-align: center ;margin: 2px; font-size: 25px;display: block;position: absolute;right: 950px;}
+
+    .otrosserv{text-align: justify;background-color: rgb(0, 123, 255) ;display: flex inline ;height: 80px;width: 200px;border-radius: 50px;text-align: center;align-content: center; font-size: 25px;text-align: center; display: block;position: absolute;right: 700px;}
+
+    .VentaRep{text-align: justify;background-color:rgb(0, 123, 255) ;display: flex inline-block;overflow: auto ;height: 300px;width: 400px;border-radius: 50px;text-align: center;align-content: center; font-size: 25px;text-align: center;justify-content: flex-end space-between;position: relative;top: 300px;margin: 10px}
+    .ServicioTec{text-align: justify;background-color:rgb(0, 123, 255);display: flex inline-block;overflow: auto ;height: 300px;width: 400px;border-radius: 50px;text-align: center;align-content: center; font-size: 25px;text-align: center;justify-content: flex-end space-bet;position: relative;top: 300px;margin: 10px;}
+
+    .otrosservi{background-color:rgb(0, 123, 255) ;display: flex inline-block;overflow: auto ;height: 300px;width: 400px;border-radius: 50px;text-align: center;align-content: center; font-size: 25px;text-align: center;justify-content: flex-end space-evenly;position: relative;top: 300px;}
+
+
+
+    /*Barra busqueda de repuestps*/
+    /*(Logo y título todas las páginas)*/
+    .barra3{margin-top: 100px;background-color: rgb(0, 123, 255)}
+
+    .barra3_list{display: flex ;flex-direction: row;font-size: 25px;place-content:initial;;font-size: 25px;place-content:initial;justify-content: space-between;height: fit-content;}
+
+    .barra3_item{display:flex;justify-content:space-between;background-color: rgb(255, 87, 34) ;height: 60px;width: 150px;font-family:sans-serif ;font-size: 25px;justify-content: center;text-decoration: none;    border-radius: 10px;padding-top: 30px;}
+
+    /*RepuestosFotos*/
+    .RepuestosFotos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+        grid-auto-rows: minmax(100px, auto); /* Ajusta la altura mínima de las filas */
+        gap: 10px; /* Espacio entre las imágenes */
+        max-width: 1200px; /* Ancho máximo de la galería */
+        margin: 20px auto; /* Centra la galería y agrega margen superior e inferior */
+    }
+
+
+    .imgrep{    max-width: 100%; /* Asegura que la imagen no se desborde */
+        max-height: 100%; /* Asegura que la imagen no se desborde */;justify-items: center; display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra verticalmente */
+        height: 300px;           /* Ajusta según sea necesario */
+        border: 2px solid #000;  /* Opcional, solo para mostrar el contorno de la caja */
+        position: relative;
+        min-width: 100%;
+        
+        
+}
+
+    .gallery__item--01 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));width: 100%;}
+    .gallery__item--02 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+    .gallery__item--03 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+    .gallery__item--04 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+    .gallery__item--05 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+    .gallery__item--06 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+    .gallery__item--07 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+    .gallery__item--08 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+    .gallery__item--09 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+    .gallery__item--10 {background-image: linear-gradient(rgb(0, 123, 255), rgb(82, 160, 243));}
+
+
+
+
+    #paginado {
+        display: flex;
+        justify-content: center; /* Centra los elementos en el contenedor */
+      }
+      
+      .pagination {
+        display: flex;
+        list-style: none; /* Elimina los puntos de lista */
+        padding: 0; /* Elimina el padding por defecto */
+        margin: 0; /* Elimina el margin por defecto */
+      }
+      
+      .page-item {
+        margin: 0 5px; /* Espaciado entre los ítems */
+      }
+      
+      .page-link {
+        display: block;
+        padding: 10px 15px; /* Ajusta el tamaño del área clickeable */
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        color: #007bff; /* Cambia el color del texto del enlace */
+        border: 1px solid #dee2e6; /* Añade un borde alrededor del enlace */
+        border-radius: 0.25rem; /* Redondea las esquinas del borde */
+      }
+      
+      .page-item.active .page-link {
+        background-color: #007bff; /* Fondo cuando el ítem está activo */
+        color: white; /* Color del texto cuando el ítem está activo */
+      }
+
+      .nombre{font-family:sans-serif ;font-size: 25px;align-self: center;text-decoration: solid;text-align: center;}
+    .precio{font-family:sans-serif ;font-size: 25px;color: #f09d0d;text-align: center;}
+
+    /* contactenos */
+    .Contactenos{display: flex;position: relative;}
+    .form_imput{position: relative;display: flex inline;}
+
+    /*Footer*/
+
+.InformacionFooter{    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual tamaño */
+    padding: 10px; /* Opcional: agrega algo de espacio alrededor */
+    width: 100%;
+}
+
+    .footer {
+        background-color:rgb(0, 123, 255);
+        color: black;
+        padding: 20px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+.footer__info{align-content: center;}
+
+    .footer__info p {
+        margin: 10px 0;
+        align-content: center;
+    }
+
+    .footer__info a {
+        color: orange;
+        text-decoration: none;
+        align-content: center;
+
+    }
+
+
+    .barra3_item{list-style: none;}
+.Ayuda{background-color: white;border-radius: 10px;width: 500px;margin: 50px    ;}
+
+    /* (Other)*/
+    .btn-wsp{
+        position: flex;
+        width: 55px;
+        line-height:  55px;
+        bottom: 30px;
+        right: 30px;
+        background: #0df053;
+    }
+
+
+
+

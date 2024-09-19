@@ -1,0 +1,198 @@
+/*(Logo y título todas las páginas)*/
+head{font-family:sans-serif ;}
+header{
+    display: flex;
+    justify-content:space-between ;
+    background-color: rgb(0, 123, 255);
+    margin: 0;
+    align-items: center;
+    padding: 0px;
+    justify-content: space-between;
+    border-radius: 10px;
+;
+}
+.logo{height: 125px; width: 150px;margin: 0%;margin-right: 10px;}
+.logos {
+    display: flex;
+    align-items: center;
+    margin:0px ;
+}
+.logo-nombre{padding: 0px;margin-left: 0;font-size: 40px;color: black;}
+
+    a{text-decoration: none;color: black;
+    }
+
+    .check{display: flex; position: absolute; top: 30px; left: 40px;}
+
+    /*(Listas barra navegación)*/
+    nav{display: flex; justify-content: space-around;align-items: start;}
+    nav.a{font-weight: 600;padding-left: 10px;}
+
+    .nav__item:hover{background-color: white;display: inline;} 
+    .nav{color: #000;background-color: rgb(0, 123, 255);
+        text-decoration: none /*(quita los puntitos de enumerar)*/;
+        padding: 0px 0px ;
+        text-align: center;
+    flex-wrap: nowrap ;}
+    .nav__compra{background-color: rgb(255, 87, 34);display: inline;font-size: 25px;padding: 40px;border-radius: 10px;text-decoration: none;}
+
+
+    .nav__item{padding: 20px;display: inline;flex-direction: row;font-size: 25px;place-content:initial}
+
+    .nav_list-sub{ display: none/*(para que no salga la lista)*/;
+        position: absolute; 
+        min-width: 40px
+    }
+.nav__link{text-decoration: none;color:#000;}
+
+/*Lavadoras*/
+.Servicios{
+    display: grid;
+}
+
+
+
+    /*No estoy segura*/
+
+    .RepuestosFotos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+        grid-auto-rows: minmax(100px, auto); /* Ajusta la altura mínima de las filas */
+        gap: 10px; /* Espacio entre las imágenes */
+        max-width: 1200px; /* Ancho máximo de la galería */
+        margin: 20px auto; /* Centra la galería y agrega margen superior e inferior */
+    }
+
+
+/* Contenedor principal de servicios */
+.Servicios {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+    padding: 20px;
+    width: 100%;
+}
+
+/* Contenedor de cada servicio */
+.Lavadoras, .Neveras, .Imgref2 {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgb(0, 123, 255); /* Color de fondo de los servicios */
+    color: rgb(1, 0, 0); /* Color del texto */
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Permite que cada sección se expanda para ocupar espacio disponible */
+    max-width: 45%; /* Limita el ancho máximo de cada sección para que no se desborden */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil */
+    transition: transform 0.3s, box-shadow 0.3s; /* Agrega transición para el hover */
+}
+
+/* Imagen dentro de los servicios */
+.Imgref {
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    border-radius: 8px; /* Bordes redondeados en la imagen */
+}
+
+/* Estilo para el texto de los servicios */
+.Lavadoras h2, .Neveras h2, .Imgref2 h2 {
+    font-size: 2em; /* Tamaño de fuente más grande para los títulos */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.Lavadoras p, .Neveras p, .Imgref2 p {
+    font-size: 1.1em; /* Tamaño de fuente del texto */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+}
+
+/* Estilo para la lista de servicios */
+.Lavadoras ol, .Neveras ol, .Imgref2 ol {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.Lavadoras li, .Neveras li, .Imgref2 li {
+    font-size: 1.2em; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
+}
+
+.Lavadoras:hover, .Neveras:hover, .Imgref2:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+/* Estilos específicos para cada servicio */
+.Lavadoras {
+    background-color: rgb(0, 123, 255); 
+}
+
+.Neveras {
+    background-color: rgb(252, 142, 109); 
+}
+
+.Imgref2 {
+    background-color: rgb(43, 214, 226); 
+}
+h1 {
+    font-size: 3em; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+    color: rgb(0, 123, 255); /* Color del texto */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agrega una sombra al texto */
+}
+
+/* Estilo para los títulos de cada servicio */
+.Lavadoras h2, .Neveras h2, .Imgref2 h2 {
+    font-size: 2.5em; /* Tamaño de fuente más grande para los títulos */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    color: rgb(255, 255, 255); /* Color del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para hacer el texto más visible */
+}
+
+
+/* */
+.footer {
+    background-color:rgb(0, 123, 255);
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.footer__info{align-content: center;}
+
+.footer__info p {
+    margin: 10px 0;
+    align-content: center;
+}
+
+.footer__info a {
+    color: orange;
+    text-decoration: none;
+    align-content: center;
+
+}
+
+
+.InformacionFooter{    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual tamaño */
+    padding: 10px; /* Opcional: agrega algo de espacio alrededor */
+    width: 100%;
+}
+
+
+    

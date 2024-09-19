@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styless repuestos.css">
+    <link rel="icon" href="Imágenes/logos.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<!---Esto le da el head (color y el loco a la página)-->
+<header>
+    <a href="Nosotros.html" class="logos">
+        <img src="Imágenes/Logos.jpg" alt="logos" width="50" height="50" class="logo">
+        <h2 class="logo-nombre">Repuestos 3J</h2>
+    </a>
+
+    <!---Esto es el menú de opciones-->
+
+    <body>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="Index.html"> Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="Repuestos.html"> Repuestos</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="Servicios.html"> Servicios </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="Quienes_somos.html"> Sobre nosotros</a>
+                </li>
+                <li class="nav__compra">
+                    <a class="nav__link" href="AgregarRepuesto.html"> Agregar Producto</a>
+                </li>
+                <ul class="nav_list-sub">
+                    <Li><a href="Servicios.html">Lavadoras</a></Li>
+                    <Li><a href="Neveras.html">Neveras</a></Li>
+                </ul>
+            </ul>
+
+            </li>
+
+            </ul>
+            </ul>
+
+        </nav>
+</header>
+
+<br>
+<!--Repuestos imagenes y precios-->
+<div class="contenedor">
+
+    <div class="selectorImagenes">
+        <p>Filtros</p>
+        <br>
+        <ol>
+            <li>Filtro</li>
+            <li>Bomba</li>
+            <li>Transmisión</li>
+            <li>Buje</li>
+        </ol>
+    </div>
+
+    <!----->
+    <div class="RepuestosFotos" id="RepuestosFotos">
+        <div class="gallery__item--01 gallery__gral">
+            <img src="Imágenes/Bomba.png" alt="" width="" height="" class="imgrep">
+            <div class="nombre">
+                <p>Bomba</p>
+            </div>
+            <div class="precio">
+                <p>$16.000</p>
+            </div>
+
+        </div>
+    </Div>
+
+
+
+    <div class="paginado">
+
+    </div>
+
+    <button id="mostrar-todos">Mostrar todos los productos</button>
+
+
+</div>
+</div>
+
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination" id="paginado">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</nav>
+
+<script>
+    window.onload = async ()=> {
+    const paginado = 1
+    let imagenes;
+    //Imágenes/Filtro 2.png//
+
+    let paginaActual = 1
+    traerImagenes=async()=>{
+const respuesta= await fetch('http://localhost:3000/repuestos/listar');
+const data = await respuesta.json();
+
+imagenes=data;
+
+    }
+    /*/const imagenes = [
+        { nombre: "bomba", imagen: "Imágenes/Bomba.png", valor: 16000 },
+        { nombre: "filtro", imagen: "Imágenes/Filtro 2.png", valor: 8000 },
+        { nombre: "polea", imagen: "Imágenes/Polea.png", valor: 16000 },
+        { nombre: "buje", imagen: "Imágenes/Buje.png", valor: 16000 },
+        { nombre: "bomba2", imagen: "Imágenes/Bomba.png", valor: 16000 },
+    ]*/
+
+    await traerImagenes ();
+    console.log (imagenes) 
+
+
+    function mostrarProductos(pagina) {
+        const galeria = document.getElementById('RepuestosFotos');
+        galeria.innerHTML = "";
+        const inicio = (pagina - 1) * paginado;
+        const final = inicio + paginado;
+        const productoPorPagina = imagenes.slice(inicio, final);
+        productoPorPagina.forEach(producto => {
+            console.log(producto)
+            const div = document.createElement("div");
+            div.className = "gallery__item--01 gallery__gral";
+
+            const imagen = document.createElement("img");
+            imagen.src = 'Imágenes/Filtro 2.png'; /*Puedo cambiarlo por producto.imagen para poner la imagen dependiendo de*/
+            imagen.className = "imgrep";
+
+            const nombreDiv = document.createElement("div");
+            nombreDiv.className = "nombre";
+
+            const nombreP = document.createElement("p");
+            nombreP.textContent = producto.nombre;
+            nombreDiv.appendChild(nombreP);
+
+            const precioDiv = document.createElement("div");
+            precioDiv.className = "nombre";
+            const precioP = document.createElement("p");
+            precioP.textContent = producto.precio;
+
+            precioDiv.appendChild(precioP);
+            div.appendChild(imagen);
+            div.appendChild(nombreDiv)
+            div.appendChild(precioDiv)
+            galeria.appendChild(div);
+
+        })
+    }
+    function configurarPaginado(totalRepuestos) {
+        const pagination = document.getElementById('paginado');
+        pagination.innerHTML = '';
+        const pageCount = Math.ceil(totalRepuestos / paginado);
+
+        for (let i = 1; i <= pageCount; i++) {
+            const li = document.createElement('li');
+            li.className = 'page-item';
+            const a = document.createElement('a');
+            a.className = 'page-link';
+            a.href = '#';
+            a.textContent = i;
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentPage = i;
+                mostrarProductos(currentPage);
+                updatePagination();
+            });
+            li.appendChild(a);
+            pagination.appendChild(li);
+        }
+    }
+
+    function updatePagination() {
+        const pageItems = document.querySelectorAll('.page-item');
+        pageItems.forEach((item, index) => {
+            if (index + 1 === paginaActual) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+    //*configurarPaginado(imagenes.length);*//
+    configurarPaginado(imagenes.length);
+    mostrarProductos(paginaActual);
+    updatePagination();
+
+}
+</script>
+</body>
+
+
+
+
+<br>
+
+<footer class="footer">
+
+    <div class="InformacionFooter">
+        <div class="Info">
+            <p>Dirección: Calle 181 #49a -40 Bogotá, Colombia</p>
+            <p>Teléfono: 3124381443</p>
+            <p>Horarios: L-D 9:00 - 21:00</p>
+
+        </div>
+        <div class="Suscripcion">
+            <p>SUSCRIBASE Y OBTENGA 5% DE DESCUENTO </p>
+            <div class="register__field2">
+                <label class="register__label" for="Email">Email *</label>
+                <input class="register__input" type="email" name="EmailInput" id="email" required>
+            </div>
+            <div class="enviar"><input type="submit" class="register__button2"></div>
+        </div>
+    </div>
+
+    <div class="footer__info">
+        <p>&copy; 2024 3J. Todos los derechos reservados.</p>
+        <p><a href="Políticas_de_envío.html">Política de Envíos</a> | <a href="Contactenos.html">Contáctenos</a></p>
+        <p><a href="Index.html">Volver al inicio</a>
+
+    </div>
+</footer>
+
+</div>
+</main>
+
+</html>
