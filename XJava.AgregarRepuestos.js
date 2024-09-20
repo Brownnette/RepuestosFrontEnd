@@ -2,7 +2,8 @@
 window.onload = async () => {
     const productForm = document.getElementById('productForm');
     const loginMessage = document.getElementById('loginMessage');
-    const apiUrl = 'https://repuestos-backend.vercel.app';
+    const apiUrl = 'https://repuestos-backend.vercel.app'
+    ;
 
     // Manejo del formulario de agregar repuesto
     if (productForm) {
