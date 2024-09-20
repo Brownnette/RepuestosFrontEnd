@@ -50,7 +50,6 @@ window.onload = async () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify({ new_user, new_password, new_email })
             });

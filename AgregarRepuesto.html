@@ -47,19 +47,21 @@
     <body>
         <!---Fomrs para agregar repuestos-->
         <div class="main-content">
-            <div class="productForm">
-                <label for="name">Nombre del Producto:</label>
-                <input type="text" name="name" required id="name" >
+            <form id="productForm">
+                <label for="name">Nombre del Producto::</label>
+                <input type="name" name="name" required id="name" >
                 <br>
                 <label for="price">Precio:</label>
-                <input type="number" name="price" required id="price"  min="0" step="any">
+                <input type="price" name="price" required id="price" >
                 <br>
-                <label for="productID">ProductID:</label>
-                <input type="number" name="productID" required id="productID"  min="0" step="any">
-
+                <label for="id">Id:</label>
+                <input type="id" name="id" required id="id" >
                 <br>
                 <div class="enviar">
-                    <input type="button" class="register__button2" id="save" value="Guardar">
+                    <button type="submit"> Ingresar </button>
+                </form>
+                <p id="loginMessage"></p>
+
                 </div>
             </div>
         </div>
@@ -71,6 +73,8 @@
         <tr>
             <th>Nombre</th>
             <th>Precio</th>
+            <th>ID</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody id="repuestoTBody">
