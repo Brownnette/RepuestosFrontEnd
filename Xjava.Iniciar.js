@@ -3,7 +3,7 @@ window.onload = async () => {
     const loginMessage = document.getElementById('loginMessage');
     const registerForm = document.getElementById('registerForm');
     const registerMessage = document.getElementById('registerMessage');
-    const apiUrl = 'repuestos-backend.vercel.app';
+    const apiUrl = 'https://repuestos-backend.vercel.app';
 
     // Manejo del formulario de login
     loginForm.addEventListener('submit', async function(event) {
