@@ -1,5 +1,6 @@
 /*Agregar repuesto*/
 window.onload = async () => {
+    const apiUrl = 'repuestos-backend.vercel.app';
     const productForm = document.getElementById('productForm');
     const loginMessage = document.getElementById('loginMessage');
 
@@ -12,7 +13,7 @@ window.onload = async () => {
 
 
         try {
-            const response = await fetch('http://localhost:3000/repuestos/registrar', {
+            const response = await fetch(`${apiUrl}/repuestos/registrar`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -35,34 +36,30 @@ window.onload = async () => {
             }
             });
     };
-
-
-
 /*Clase*/
 window.onload = (event) => {
     //const encodeData =window.location.hash.substring(1);
     //const data = JSON.parse(atob(encodeData));
     //console.log(data);
-
         loadlistar();
     };
     
     async function loadlistar() {
         try {
-            const response = await fetch('http://localhost:3000/repuestos/listar', {
+            const response = await fetch(`${apiUrl}/repuestos/listar`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
                 },
             });
     
-            const listar = await response.json();
-            console.log(listar);
+            const repuestos = await response.json();
+            console.log(repuestos);
     
             const tableBody = document.getElementById('repuestoTBody');
             tableBody.innerHTML = '';
     
-            listar.forEach(element => {
+            repuestos.forEach(element => {
                 const row = document.createElement('tr');
     
                 const idCell = document.createElement('td');
@@ -104,7 +101,7 @@ window.onload = (event) => {
     
     async function deleteCategory(id) {
         try {
-            const response = await fetch(`http://localhost:3000/repuestos/eliminar/${id}`, {
+            const response = await fetch(`${apiUrl}/repuestos/eliminar/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

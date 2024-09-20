@@ -3,6 +3,7 @@ window.onload = async () => {
     const loginMessage = document.getElementById('loginMessage');
     const registerForm = document.getElementById('registerForm');
     const registerMessage = document.getElementById('registerMessage');
+    const apiUrl = 'repuestos-backend.vercel.app';
 
     // Manejo del formulario de login
     loginForm.addEventListener('submit', async function(event) {
@@ -11,7 +12,7 @@ window.onload = async () => {
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('http://localhost:3000/users/login', {
+            const response = await fetch(`${apiUrl}/users/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -46,7 +47,7 @@ window.onload = async () => {
 
         try {
             const token = localStorage.getItem('authToken');
-            const response = await fetch('http://localhost:3000/users/registrarUser', {
+            const response = await fetch(`${apiUrl}/users/registrarUser`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -76,7 +77,7 @@ window.onload = async () => {
 
     async function refreshToken() {
         try {
-            const response = await fetch('http://localhost:3000/users/refreshToken', {
+            const response = await fetch(`${apiUrl}/users/refreshToken`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

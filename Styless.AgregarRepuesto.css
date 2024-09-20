@@ -48,40 +48,41 @@ header{
     /*Form*/
 /* Contenedor principal para centrar el contenido */
 .main-content {
-    flex: 1; /* Ocupa el espacio disponible */
+    flex: 1; 
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    padding: 20px; /* Espacio alrededor */
+    justify-content: center; 
+    align-items: center;
+    padding: 20px; 
 }
 
 /* Estilo del formulario */
 .productForm {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espacio entre los elementos */
+    gap: 10px; 
     width: 100%;
-    max-width: 400px; /* Ancho máximo del formulario */
-    background: #f9f9f9; /* Fondo opcional */
+    max-width: 400px; 
+    background: #f9f9f9;
     padding: 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo para los elementos del formulario */
 /* Estilo para los elementos del formulario */
 .productForm label {
     font-weight: bold;
 }
 
-.productForm input[type="text"],
-.productForm input[type="number"],
-.productForm input[type="email"] {
+.productForm input[type="name"],
+.productForm input[type="price"],
+.productForm input[type="id"] {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
 
-.productForm .register__button2 {
+.productForm .enviar button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -90,38 +91,58 @@ header{
     cursor: pointer;
 }
 
-.productForm .register__button2:hover {
+.productForm .enviar button:hover {
     background-color: #0056b3;
 }
+
+/* Ajusta el contenedor principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilo del formulario */
+#productForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .Tabla {
-    padding: 20px; /* Espaciado dentro del contenedor */
-    border-radius: 8px; /* Bordes redondeados para el contenedor */
+    padding: 20px; 
+    border-radius: 8px; 
 
 }
 
 table {
     width: 100%;
-    border-collapse: collapse; /* Para evitar espacios entre celdas */
-    background-color: #fff; /* Fondo blanco para la tabla */
-    border: 1px solid #ddd; /* Borde de la tabla */
+    border-collapse: collapse; 
+    background-color: #fff; 
+    border: 1px solid #ddd; 
     margin-bottom: 10%;
 }
 
 th, td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd; /* Borde inferior en las celdas */
+    border-bottom: 1px solid #ddd; 
 }
 
 th {
-    background-color: #f9f9f9; /* Fondo para los encabezados */
-    font-weight: bold; /* Negrita en los encabezados */
+    background-color: #f9f9f9;
+    font-weight: bold; 
 }
 
 
 th{background-color: #f9f9f9;}
 
-/* Ocultar las flechas en los campos de número */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -158,7 +179,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .InformacionFooter{    display: flex;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual tamaño */
-    padding: 10px; /* Opcional: agrega algo de espacio alrededor */
+    grid-template-columns: 1fr 1fr; 
+    padding: 10px; 
     width: 100%;
 }
